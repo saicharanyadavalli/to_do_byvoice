@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📝</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="highlight">Voice</span> To-Do List</h1>
+            <p class="subtitle">Add tasks hands-free . Get more productive with voice commands.</p>
+        </header>
+        <main>
+            <div class="input-section">
+                <button id="mic-btn" title="Click and speak your task" aria-label="Add task by voice" tabindex="0">
+                    <span class="mic-svg" aria-hidden="true">
+                        <svg id="mic-svg-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="mic-pulse" cx="18" cy="18" r="16"/>
+                        <g>
+                            <rect class="mic-body" x="13" y="8" width="10" height="16" rx="5" />
+                            <ellipse class="mic-grill" cx="18" cy="13" rx="4" ry="4.5"/>
+                            <rect class="mic-stand" x="16.2" y="24" width="3.6" height="5" rx="1.2"/>
+                            <rect class="mic-stand" x="14" y="28.5" width="8" height="2" rx="1"/>
+                            <ellipse class="mic-stand" cx="18" cy="32.5" rx="5" ry="1.2" opacity="0.18"/>
+                        </g>
+
+                        </svg>
+                    </span>
+                </button>
+                <span id="status">Click the mic and speak your task...</span>
+                <span class="info-icon" tabindex="0" aria-label="Help">&#9432;
+                    <span class="tooltip">Click the mic and speak up what your task is. Your voice will be translated into a to-do task automatically!.</span>
+                </span>
+            </div>
+            <ul id="task-list" class="task-list">
+            </ul>
+        </main>
+        <footer>
+            Tasks will appear here
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
